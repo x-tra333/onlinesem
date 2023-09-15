@@ -1,0 +1,106 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('bkg.gif');
+    background-size: cover;
+    text-align: center;
+    padding: 20px;
+}
+
+form {
+    background: url('bg.gif');
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px; 
+    margin: 0 auto;
+    text-align:left;
+    font-size: large;
+}
+
+h2 {
+    background-color: #007bffbc;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
+    font-size: 35px;
+    font-weight: bold;
+    text-shadow: 8px 8px 8px #ffffff;
+
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    vertical-align: middle;
+    size-adjust:calc(10px);
+}
+
+label.radio-label {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Add your custom button style */
+input[type="button"] {
+    background-color: #3498db; /* Background color */
+    color: #fff; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding around text */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* Style for button on hover (optional) */
+input[type="button"]:hover {
+    background-color: #0056b3; /* Change background color on hover */
+}
+
+
+@media screen and (max-width: 600px) {
+    form {
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="email"],
+    input[type="radio"],
+    input[type="submit"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="video.css">
+    <link rel="shortcut icon" type="x-icon" href="logo-modified.png">
+    <title>Watch Video</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Gabay Sambuhay -  Ang Sakramento ng Bautismo (St. Pauls)</h1>
+    </div>
+    <video width="640" height="360" controls>
+        <source src="Gabay Sambuhay - Ang Sakramento ng Bautismo (St. Pauls).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Add a button to redirect to another website and pass fname and lname -->
+    <button onclick="proceedToQuestions()">Proceed to Questions</button>
+
+    <script>
+        function proceedToQuestions() {
+            // Get fname and lname from sessionStorage
+            var fname = sessionStorage.getItem('respondent_first_name');
+            var lname = sessionStorage.getItem('respondent_last_name');
+
+            // Redirect to quiz.html with fname and lname as query parameters
+            var url = "quizz.html?" +
+                "fname=" + encodeURIComponent(fname) +
+                "&lname=" + encodeURIComponent(lname);
+
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

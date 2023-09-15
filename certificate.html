@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('bg.gif');
+            background-size: cover;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #333;
+            margin-top: 30px;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        strong {
+            color: #000;
+        }
+        .certificate-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 600px;
+        }
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate-container">
+        <h1>Certificate of Completion</h1>
+        <p>This is to certify that:</p>
+        <p><strong id="certificateFirstName">John</strong> <strong id="certificateLastName">Doe</strong></p>
+        <p>has completed the registration.</p>
+        <p>Congratulations!</p>
+        <a class="download-button" href="#" id="downloadCertificate" download="certificate.pdf">Download Certificate</a>
+    </div>
+
+    <script>
+        
+        // Function to get URL query parameter by name
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Create a function to generate and download the PDF certificate
+        function generateCertificate() {
+            const fname = getQueryParam('fname') || 'John'; // Default to 'John' if fname not provided
+            const lname = getQueryParam('lname') || 'Doe'; // Default to 'Doe' if lname not provided
+
+            // Create a new jsPDF instance
+            const pdf = new jsPDF();
+
+            // Add content to the PDF
+            pdf.text(20, 20, 'Certificate of Completion');
+            pdf.text(20, 30, 'This is to certify that:');
+            pdf.text(20, 40, fname + ' ' + lname); // Populate with fname and lname
+
+            // Save the PDF as a blob
+            const pdfBlob = pdf.output('blob');
+
+            // Create a download link for the PDF with the custom filename
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(pdfBlob);
+            link.download = `${fname}_${lname}_certificate.pdf`; // Set custom filename
+            link.style.display = 'none'; // Hide the link
+
+            // Append the link to the body and trigger the download
+            document.body.appendChild(link);
+            link.click();
+
+            // Clean up: remove the link element
+            document.body.removeChild(link);
+        }
+
+        // Update the certificate name based on query parameters
+        const certificateFirstName = document.getElementById('certificateFirstName');
+        const certificateLastName = document.getElementById('certificateLastName');
+        const fnameParam = getQueryParam('fname');
+        const lnameParam = getQueryParam('lname');
+        if (fnameParam && lnameParam) {
+            certificateFirstName.textContent = fnameParam;
+            certificateLastName.textContent = lnameParam;
+        }
+
+        // Attach the generateCertificate function to the button click event
+        const downloadButton = document.getElementById('downloadCertificate');
+        if (downloadButton) {
+            downloadButton.addEventListener('click', generateCertificate);
+        }
+    </script>
+</body>
+</html>

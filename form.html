@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="form.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="logo-modified.png">
+    <title>Registration Form</title>
+    <script>
+        function sendData() {
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+
+            // Store fname and lname in sessionStorage
+            sessionStorage.setItem('respondent_first_name', fname);
+            sessionStorage.setItem('respondent_last_name', lname);
+
+            // Manually trigger the form submission
+            document.querySelector("form").submit();
+        }
+    </script>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form method="POST" action="vid.html">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" required><br><br>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required><br><br>
+
+        <label for="bday">Birthday:</label>
+        <input type="date" id="bday" name="bday" required><br><br>
+
+        <label for="contact_number">Contact Number:</label>
+        <input type="text" id="contact_number" name="contact_number" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male" required> Male
+        <input type="radio" name="gender" value="female" required> Female
+        <input type="radio" name="gender" value="other" required> Other<br><br>
+        
+        <input type="button" value="Register" onclick="sendData()">
+    </form>
+</body>
+</html>

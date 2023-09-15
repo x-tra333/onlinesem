@@ -1,0 +1,61 @@
+body {
+    background-image: url(bkg.gif);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    min-height: 100vh;
+}
+
+.front-page-container {
+    text-align: center;
+    background: url('logo.png') center/cover no-repeat;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+    padding: 60px;
+    max-width: 500px;
+    width: 100%;
+    max-height: min-content;
+}
+
+.front-page-container h1 {
+    font-size: 50px;
+    text-shadow: 8px 8px 8px #0a232f;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.front-page-container h2 {
+    font-size: 40px;
+    text-shadow: 8px 8px 8px #0a232f;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.front-page-container p {
+    font-size: 20px;
+    text-shadow: 8px 8px 8px #0a232f;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.start-button {
+    background-color: #001d30;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-shadow: 8px 8px 8px #0a232f;
+    text-justify: auto;
+    box-shadow: 8px 8px 8px ;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.start-button:hover {
+    background-color: #001d30;
+}

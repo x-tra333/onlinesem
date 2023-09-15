@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="logo-modified.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quizz.css">
+    <title>Online Quiz</title>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="question">
+            <h2 id="question-text"></h2>
+            <div id="options" class="options"></div>
+            <button id="submit-btn" class="action-btn">Submit</button>
+        </div>
+        <div class="result">
+            <p id="result-text"></p>
+            <button id="next-btn" class="action-btn">Next Question</button>
+            <!-- Add a button to go back to the previous website -->
+            <button id="go-back-btn" class="action-btn" onclick="goBack()">Go Back</button>
+        </div>
+    </div>
+    <script src="quizz.js"></script>
+    <script>
+        function goBack() {
+            // Redirect to another website
+            window.location.href = "vid.html"; // Replace with the desired URL
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+body {
+  background-image: url('bkg.gif');
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center; /* Center the content within the container */
+  background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background to the container */
+  padding: 1px; /* Add some padding to the container */
+  border-radius: 10px; /* Add rounded corners to the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the container */
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #00b3cafd;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+video {
+  width: 640px; /* Add "px" to specify width */
+  height: 360px; /* Add "px" to specify height */
+  outline: none;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}

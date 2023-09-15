@@ -1,0 +1,117 @@
+body {
+  background-image: url('bkg.gif');
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 18px; /* Increase the body text size */
+}
+
+/* Styles for the quiz container */
+.quiz-container {
+  background: url('bg.gif');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px; 
+  max-height: 820px;
+  margin: 0 auto;
+}
+
+/* Styles for the quiz title */
+.quiz-container h2 {
+  color: #1b60c8;
+  margin-bottom: 30px;
+  margin-top: auto; /* Increased margin for better spacing */
+  font-size: 35px;
+  text-align: center; /* Increase the quiz title text size */
+}
+
+/* Styles for the answer options */
+.options label {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 30px; 
+  text-align: start;/* Increase the answer option text size */
+}
+
+.options input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Styles for the action button */
+.action-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 18px; /* Increase button padding for better readability */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+  margin-left: auto; /* Slightly increased margin for better spacing */
+  font-size: 25px; /* Increase the button text size */
+}
+
+.action-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Styles for the quiz result */
+.result p {
+  margin-top: 15px; /* Increased margin for better spacing */
+  font-size: 22px; /* Increase the result text size */
+}
+
+/* Media Query for Cellphone Size */
+@media screen and (max-width: 480px) {
+  .quiz-container {
+    padding: 10px; /* Adjust padding for smaller screens */
+    max-width: 100%; /* Make the container full width on smaller screens */
+    border-radius: 0; /* Remove border-radius for a simpler look */
+  }
+  
+  .quiz-container h2 {
+    font-size: 20px; /* Adjust the quiz title text size for smaller screens */
+  }
+  
+  .options label {
+    font-size: 16px;
+   /* Adjust answer option text size for smaller screens */
+  }
+  
+  .action-btn {
+    font-size: 18px; /* Adjust button text size for smaller screens */
+  }
+  
+  .result p {
+    font-size: 16px; /* Adjust result text size for smaller screens */
+  }
+}
+
+#go-back-btn {
+  /* Add your styling here */
+  background-color: #2980b9; /* Change the background color */
+  color: #ffffff; /* Change the text color */
+  position: relative;
+  left: -130px; 
+  top: -94px;
+}
+
+#next-btn {
+  /* Add your styling here */
+  background-color: #2980b9; /* Change the background color */
+  color: #ffffff; /* Change the text color */
+  position: relative;
+  right: -162px; 
+  top: -25px;
+  margin-left: 40px;
+}
